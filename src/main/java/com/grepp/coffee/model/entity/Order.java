@@ -4,10 +4,7 @@ import com.grepp.coffee.model.dto.OrderResponseDTO;
 import com.grepp.coffee.model.service.OrderService;
 import com.grepp.coffee.model.service.ProductService;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.core.Local;
@@ -22,6 +19,7 @@ import java.util.stream.Collectors;
 @Table(name = "orders")
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {

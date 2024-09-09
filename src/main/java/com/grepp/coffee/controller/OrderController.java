@@ -34,7 +34,7 @@ public class OrderController {
     }
 
     @GetMapping("/{orderId}")
-    public ResponseEntity<?> getOrder(@RequestParam UUID orderId) {
+    public ResponseEntity<?> getOrder(@PathVariable UUID orderId) {
         OrderResponseDTO order = orderService.getOrderById(orderId);
         return ResponseEntity.ok(order);
     }

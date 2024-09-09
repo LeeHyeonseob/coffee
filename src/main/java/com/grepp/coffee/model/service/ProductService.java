@@ -49,7 +49,7 @@ public class ProductService {
         product.setCategory(productRequestDTO.getCategory());
         product.setCreatedAt(LocalDateTime.now());
 
-        return productRepository.save(product).toDTO();
+        return product.toDTO();
 
     }
 
@@ -63,8 +63,7 @@ public class ProductService {
         product.setCategory(productRequestDTO.getCategory());
         product.setUpdatedAt(LocalDateTime.now());
 
-        Product updateProduct = productRepository.save(product);
-        return updateProduct.toDTO();
+        return product.toDTO();
     }
 
     public ProductResponseDTO updateProductById(UUID id, ProductRequestDTO productRequestDTO) {
@@ -75,8 +74,7 @@ public class ProductService {
         product.setCategory(productRequestDTO.getCategory());
         product.setUpdatedAt(LocalDateTime.now());
 
-        Product updateProduct = productRepository.save(product);
-        return updateProduct.toDTO();
+        return product.toDTO();
     }
 
     //delete

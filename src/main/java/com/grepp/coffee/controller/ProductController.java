@@ -73,7 +73,7 @@ public class ProductController {
     }
 
     /*
-        추가적인 고민 -> PathVariable로 파라미터를 받을지 아니면 @RequestParam으로 받을지
+        추가적인 고민 -> @PathVariable로 파라미터를 받을지 아니면 @RequestParam으로 받을지
         RESTful API 설계를 보면 리소스 필터링, 정렬, 페이징 시에는 RequestParam활용하고 리소스를 직접 식별하는 경우에는 PathVariable을 사용한다 => 이 경우에는 PathVariable을 사용한다
      */
 }

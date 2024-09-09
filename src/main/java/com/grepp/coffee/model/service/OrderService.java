@@ -59,9 +59,9 @@ public class OrderService {
         }
 
         order.setOrderItems(orderItems);
-        Order saveOrder = orderRepository.save(order);
 
-        return Order.toDTO(saveOrder, totalPrice);
+
+        return Order.toDTO(order, totalPrice);
 
 
     }
@@ -103,8 +103,8 @@ public class OrderService {
         order.setOrderItems(newOrderItems);
         order.setUpdatedAt(LocalDateTime.now());
 
-        Order saveOrder = orderRepository.save(order);
-        return Order.toDTO(saveOrder, totalPrice);
+
+        return Order.toDTO(order, totalPrice);
     }
 
     //고객이 자신의 주문 내역 볼 수 있게
